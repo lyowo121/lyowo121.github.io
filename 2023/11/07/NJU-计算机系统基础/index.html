@@ -19,16 +19,16 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lyowo121.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="概述为什么要学习计算机系统基础计算机系统基本组成与基本功能冯诺依曼计算机采用存储程序的工作方式。 指令由二进制代码构成，指令由具体操作和操作数的地址码构成。其中操作可以是算术运算也可以是逻辑运算。 现代计算机基本结构存储器运算器控制器输入设备输出设备 取指，译码，取操作数，执行，存储（寄存器组或者存储器），PC+1。 现代控制器运算器集成在CPU中，存储器和CPU共同构成主机部分。">
+    <meta name="description" content="概述为什么要学习计算机系统基础计算机系统基本组成与基本功能1946年ENIAC——用十进制表达信息； ——通过设置开关和插拔电缆手动编程； 冯诺依曼计算机存储程序：必须将事先编好的程序和原始数据送入主存后才能执行程序，一旦程序被启动执行，计算机能在不需操作人员干预下自动完成逐条指令取出和完成的任务。 硬件技术经历的阶段电子管，晶体管，集成电路，超大规模集成电路。 冯诺依曼结构基本思想1.采用“存储">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NJU-计算机系统基础">
 <meta property="og:url" content="http://lyowo121.github.io/2023/11/07/NJU-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="lyowo">
-<meta property="og:description" content="概述为什么要学习计算机系统基础计算机系统基本组成与基本功能冯诺依曼计算机采用存储程序的工作方式。 指令由二进制代码构成，指令由具体操作和操作数的地址码构成。其中操作可以是算术运算也可以是逻辑运算。 现代计算机基本结构存储器运算器控制器输入设备输出设备 取指，译码，取操作数，执行，存储（寄存器组或者存储器），PC+1。 现代控制器运算器集成在CPU中，存储器和CPU共同构成主机部分。">
+<meta property="og:description" content="概述为什么要学习计算机系统基础计算机系统基本组成与基本功能1946年ENIAC——用十进制表达信息； ——通过设置开关和插拔电缆手动编程； 冯诺依曼计算机存储程序：必须将事先编好的程序和原始数据送入主存后才能执行程序，一旦程序被启动执行，计算机能在不需操作人员干预下自动完成逐条指令取出和完成的任务。 硬件技术经历的阶段电子管，晶体管，集成电路，超大规模集成电路。 冯诺依曼结构基本思想1.采用“存储">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://lyowo121.github.io/images/image-20231107175402824.png">
 <meta property="article:published_time" content="2023-11-07T09:51:48.000Z">
-<meta property="article:modified_time" content="2023-11-07T09:54:08.044Z">
+<meta property="article:modified_time" content="2023-11-08T09:14:45.831Z">
 <meta property="article:author" content="lyowo121">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lyowo121.github.io/images/image-20231107175402824.png">
@@ -107,7 +107,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要学习计算机系统基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%E4%B8%8E%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">计算机系统基本组成与基本功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="nav-number">1.2.1.</span> <span class="nav-text">冯诺依曼计算机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.2.</span> <span class="nav-text">现代计算机基本结构</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要学习计算机系统基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90%E4%B8%8E%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">计算机系统基本组成与基本功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1946%E5%B9%B4ENIAC"><span class="nav-number">1.2.1.</span> <span class="nav-text">1946年ENIAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="nav-number">1.2.2.</span> <span class="nav-text">冯诺依曼计算机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E7%A8%8B%E5%BA%8F%EF%BC%9A"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">存储程序：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E6%8A%80%E6%9C%AF%E7%BB%8F%E5%8E%86%E7%9A%84%E9%98%B6%E6%AE%B5"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">硬件技术经历的阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">冯诺依曼结构基本思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">现代计算机基本结构</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -176,9 +176,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2023-11-07 17:51:48 / Modified: 17:54:08" itemprop="dateCreated datePublished" datetime="2023-11-07T17:51:48+08:00">2023-11-07</time>
+      <time title="Created: 2023-11-07 17:51:48" itemprop="dateCreated datePublished" datetime="2023-11-07T17:51:48+08:00">2023-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-08 17:14:45" itemprop="dateModified" datetime="2023-11-08T17:14:45+08:00">2023-11-08</time>
     </span>
 
   
@@ -190,12 +196,26 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="为什么要学习计算机系统基础"><a href="#为什么要学习计算机系统基础" class="headerlink" title="为什么要学习计算机系统基础"></a>为什么要学习计算机系统基础</h2><h2 id="计算机系统基本组成与基本功能"><a href="#计算机系统基本组成与基本功能" class="headerlink" title="计算机系统基本组成与基本功能"></a>计算机系统基本组成与基本功能</h2><h3 id="冯诺依曼计算机"><a href="#冯诺依曼计算机" class="headerlink" title="冯诺依曼计算机"></a>冯诺依曼计算机</h3><p>采用存储程序的工作方式。</p>
-<p>指令由二进制代码构成，指令由具体操作和操作数的地址码构成。其中操作可以是算术运算也可以是逻辑运算。</p>
-<h3 id="现代计算机基本结构"><a href="#现代计算机基本结构" class="headerlink" title="现代计算机基本结构"></a>现代计算机基本结构</h3><p>存储器运算器控制器输入设备输出设备</p>
-<p>取指，译码，取操作数，执行，存储（寄存器组或者存储器），PC+1。</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="为什么要学习计算机系统基础"><a href="#为什么要学习计算机系统基础" class="headerlink" title="为什么要学习计算机系统基础"></a>为什么要学习计算机系统基础</h2><h2 id="计算机系统基本组成与基本功能"><a href="#计算机系统基本组成与基本功能" class="headerlink" title="计算机系统基本组成与基本功能"></a>计算机系统基本组成与基本功能</h2><h3 id="1946年ENIAC"><a href="#1946年ENIAC" class="headerlink" title="1946年ENIAC"></a>1946年ENIAC</h3><p>——用十进制表达信息；</p>
+<p>——通过设置开关和插拔电缆手动编程；</p>
+<h3 id="冯诺依曼计算机"><a href="#冯诺依曼计算机" class="headerlink" title="冯诺依曼计算机"></a>冯诺依曼计算机</h3><h4 id="存储程序："><a href="#存储程序：" class="headerlink" title="存储程序："></a>存储程序：</h4><p>必须将事先编好的程序和原始数据送入主存后才能执行程序，一旦程序被启动执行，计算机能在不需操作人员干预下自动完成<strong>逐条指令取出和完成</strong>的任务。</p>
+<h4 id="硬件技术经历的阶段"><a href="#硬件技术经历的阶段" class="headerlink" title="硬件技术经历的阶段"></a>硬件技术经历的阶段</h4><p>电子管，晶体管，集成电路，超大规模集成电路。</p>
+<h4 id="冯诺依曼结构基本思想"><a href="#冯诺依曼结构基本思想" class="headerlink" title="冯诺依曼结构基本思想"></a>冯诺依曼结构基本思想</h4><p>1.采用“存储程序”的工作方式；</p>
+<p>2.计算机由存储器，运算器，控制器，输入设备，输出设备五个部分组成。</p>
+<p>3.存储器存放指令和数据，形式上数据和指令没有区别，但计算机应能区分它们；控制器应能自动执行指令；运算器应能算数运算和逻辑运算；操作人员可以通过输入&#x2F;输出设备使用计算机。</p>
+<p>4.计算机内部以二进制形式表示指令和数据；每条指令由操作码和地址码两部分组成，操作码指出操作类型，地址码指出操作数的地址；由一串程序组成指令。</p>
+<h4 id="现代计算机基本结构"><a href="#现代计算机基本结构" class="headerlink" title="现代计算机基本结构"></a>现代计算机基本结构</h4><p>取指，译码，取操作数，执行，存储（寄存器组或者存储器），PC+1。</p>
 <p>现代控制器运算器集成在CPU中，存储器和CPU共同构成主机部分。</p>
 <p><img src="/./../images/image-20231107175402824.png" alt="image-20231107175402824"></p>
+<p><strong>GPRs</strong>:通用寄存器组。临时存放从主存取来的数据或运算的结果</p>
+<p><strong>标志寄存器</strong>：检验得到的结果是否为0（ZF）；是否为负数（SF);</p>
+<p><strong>IR（Instruction Register指令寄存器）</strong>:从主存取出来的指令要临时保存在IR中；</p>
+<p><strong>PC（Program Counter程序计数器）</strong>：CPU自动按序读取主存中的指令。在执行当前指令的过程中，自动计算出下一条指令的地址并送到PC中保存。</p>
+<p><strong>CPU（Central Processing Unit中央处理器）：</strong>控制部件+运算部件+各类寄存器。</p>
+<p>**主存地址:**给主存中每个单元进行编号。0-15</p>
+<p><strong>总线</strong>：地址线，控制线。数据线。CPU为了从主存中取指令和存取数据，需要通过传输介质与主存相连，通常把连接不同部件进行信息传输的介质称为总线。</p>
+<p><strong>MAR(Memory Address Register主存地址寄存器)：</strong>CPU发送到地址线的主存地址应先存放在MAR中。</p>
+<p><strong>MDR（Memory Data Register主存数据寄存器）：</strong>发送到或从数据线取来的信息存放在主存数据寄存器中。<em>（为什么要先放到寄存器中呢？怕丢?)</em></p>
 
     </div>
 
