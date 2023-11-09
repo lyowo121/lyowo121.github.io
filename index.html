@@ -178,7 +178,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-08 17:14:45" itemprop="dateModified" datetime="2023-11-08T17:14:45+08:00">2023-11-08</time>
+      <time title="Modified: 2023-11-09 18:26:28" itemprop="dateModified" datetime="2023-11-09T18:26:28+08:00">2023-11-09</time>
     </span>
 
   
@@ -199,10 +199,10 @@
 <p>2.计算机由存储器，运算器，控制器，输入设备，输出设备五个部分组成。</p>
 <p>3.存储器存放指令和数据，形式上数据和指令没有区别，但计算机应能区分它们；控制器应能自动执行指令；运算器应能算数运算和逻辑运算；操作人员可以通过输入&#x2F;输出设备使用计算机。</p>
 <p>4.计算机内部以二进制形式表示指令和数据；每条指令由操作码和地址码两部分组成，操作码指出操作类型，地址码指出操作数的地址；由一串程序组成指令。</p>
-<h4 id="现代计算机基本结构"><a href="#现代计算机基本结构" class="headerlink" title="现代计算机基本结构"></a>现代计算机基本结构</h4><p>取指，译码，取操作数，执行，存储（寄存器组或者存储器），PC+1。</p>
+<h4 id="现代计算机基本结构"><a href="#现代计算机基本结构" class="headerlink" title="现代计算机基本结构"></a>现代计算机基本结构</h4><p>取指，译码PC+1，取操作数，执行，存储（寄存器组或者存储器）。</p>
 <p>现代控制器运算器集成在CPU中，存储器和CPU共同构成主机部分。</p>
 <p><img src="/./../images/image-20231107175402824.png" alt="image-20231107175402824"></p>
-<p><strong>GPRs</strong>:通用寄存器组。临时存放从主存取来的数据或运算的结果</p>
+<p><strong>GPRs（General Purpose Register)</strong>:通用寄存器组。临时存放从主存取来的数据或运算的结果</p>
 <p><strong>标志寄存器</strong>：检验得到的结果是否为0（ZF）；是否为负数（SF);</p>
 <p><strong>IR（Instruction Register指令寄存器）</strong>:从主存取出来的指令要临时保存在IR中；</p>
 <p><strong>PC（Program Counter程序计数器）</strong>：CPU自动按序读取主存中的指令。在执行当前指令的过程中，自动计算出下一条指令的地址并送到PC中保存。</p>
@@ -211,6 +211,36 @@
 <p><strong>总线</strong>：地址线，控制线。数据线。CPU为了从主存中取指令和存取数据，需要通过传输介质与主存相连，通常把连接不同部件进行信息传输的介质称为总线。</p>
 <p><strong>MAR(Memory Address Register主存地址寄存器)：</strong>CPU发送到地址线的主存地址应先存放在MAR中。</p>
 <p><strong>MDR（Memory Data Register主存数据寄存器）：</strong>发送到或从数据线取来的信息存放在主存数据寄存器中。<em>（为什么要先放到寄存器中呢？怕丢?)</em></p>
+<h4 id="程序和指令的执行过程"><a href="#程序和指令的执行过程" class="headerlink" title="程序和指令的执行过程"></a>程序和指令的执行过程</h4><p><strong>指令</strong>：01序列&#x3D;操作码+地址码</p>
+<p><strong>取数指令（load)</strong>:从主存单元中取出数据放到通用寄存器中；</p>
+<p>**存数指令（store)**：将通用寄存器的内容写入主存单元；</p>
+<p><strong>加法指令（add）</strong>：将两个通用寄存器单元内容相加后送入结果寄存器；</p>
+<p><strong>传送指令（mov）</strong>：将一个通用寄存器的内容送到另一个通用寄存器；</p>
+<h2 id="程序的开发和执行过程"><a href="#程序的开发和执行过程" class="headerlink" title="程序的开发和执行过程"></a>程序的开发和执行过程</h2><h3 id="程序设计语言和翻译程序"><a href="#程序设计语言和翻译程序" class="headerlink" title="程序设计语言和翻译程序"></a>程序设计语言和翻译程序</h3><p><strong>机器语言</strong>:使用特定计算机规定的指令格式而形成的0&#x2F;1序列；</p>
+<p><strong>机器代码&#x2F;机器语言程序：</strong>计算机能理解和执行的程序；其中的每条指令都有0和1组成，称为<strong>机器指令</strong>。</p>
+<p><strong>汇编语言（assembly language）</strong>：机器语言的符号表示语言(计算机不能直接理解，需要通过汇编器翻译成机器指令，只是为了人便于理解，增加代码的可读性)。<strong>用汇编语言编写的汇编语言源程序必须先转换为机器语言程序，才能被计算机执行</strong>。</p>
+<p>❗❗❗<strong>注意：</strong></p>
+<p><strong>每条汇编指令表示的功能与对应机器指令一样，汇编指令和机器指令都与特定的机器结构相关，因此，汇编语言和机器语言都属于低级语言，它们统称为🚩机器级语言🚩。</strong></p>
+<p>…微软输入法的小表情真好玩^^</p>
+<p><strong>高级程序设计语言</strong>：与具体的机器结构无关，可读性比机器级语言好。</p>
+<p><strong>翻译程序（translator）</strong>：</p>
+<p><strong>①汇编程序（assembler）</strong>：也称汇编器，实现将汇编语言源程序翻译成机器语言目标程序。</p>
+<p>**②解释程序(interpreter)**：也称解释器，实现将源程序中的语句按其执行顺序逐条翻译成机器指令并立即执行。</p>
+<p><strong>③编译程序（compiler)</strong>:也称编辑器，实现将高级语言源程序翻译成汇编语言或机器语言目标程序。</p>
+<p>:exclamation:嘿嘿，测试了新的语法功能。^^</p>
+<p>🚩<strong>被翻译的语言和程序被称为源语言和源程序</strong></p>
+<p>🚩<strong>翻译生成的语言和程序分别被称为目标语言和目标程序</strong></p>
+<p><img src="/./../images/image-20231109165755889.png" alt="image-20231109165755889"></p>
+<p>🌸<strong>指令执行时通过控制器对指令操作码进行译码，解释成控制信号来控制数据的流动和运算。</strong></p>
+<h3 id="从源程序到可执行文件"><a href="#从源程序到可执行文件" class="headerlink" title="从源程序到可执行文件"></a>从源程序到可执行文件</h3><p><strong>文本文件（text file）</strong>：用ASCII码字符或汉字字符表示的文件，源程序都是文本文件，是可显示和可读的。</p>
+<p>hello.c→预处理→编译→汇编→链接→可执行目标文件</p>
+<p><img src="/./../images/image-20231109171648497.png" alt="image-20231109171648497"></p>
+<p><img src="/./../images/image-20231109171715716.png" alt="image-20231109171715716"></p>
+<p>😀这里是一个test，看一下两种版本哪个清晰好看。</p>
+<h3 id="可执行文件的启动和执行"><a href="#可执行文件的启动和执行" class="headerlink" title="可执行文件的启动和执行"></a>可执行文件的启动和执行</h3><p>❓到底什么是磁盘啊？CDE盘是什么？主存？内存？UNIX和LINX都是什么啊？为什么有的时候说unix有时候说Linux啊</p>
+<p><img src="/./../images/image-20231109181112067.png" alt="image-20231109181112067"></p>
+<p><strong>外设&#x2F;IO设备</strong>：机械部分（外设本身）和电子部分（IO控制器或IO适配器，即设备控制器）</p>
+<p>📕数据在总线上传输之前，需要先存在存储部件中，因此，<strong>除了主存本身是存储部件以外，在CPU,I&#x2F;O桥接器，设备控制器中也有存放数据的缓冲存储部件，例如，CPU中的通用寄存器，设备控制器中的数据缓冲寄存器等</strong>。</p>
 
       
     </div>
@@ -702,7 +732,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-08 20:03:09" itemprop="dateModified" datetime="2023-11-08T20:03:09+08:00">2023-11-08</time>
+      <time title="Modified: 2023-11-09 18:09:46" itemprop="dateModified" datetime="2023-11-09T18:09:46+08:00">2023-11-09</time>
     </span>
 
   
@@ -731,6 +761,7 @@
 <p>代码：无</p>
 <h2 id="数电（优先学，是计组基础"><a href="#数电（优先学，是计组基础" class="headerlink" title="数电（优先学，是计组基础"></a>数电（优先学，是计组基础</h2><p>课程：</p>
 <p>习题：</p>
+<p>学数字逻辑电路，用Verilog搭一个什么东西来着忘了…</p>
 <h2 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h2><p>课程：浙大慕课</p>
 <p>代码：PAT</p>
 <p>OK这是一段实例文字，让我们看看GITHUB上面能否部署成功</p>
@@ -748,6 +779,8 @@
 <h2 id="虚拟机使用指南"><a href="#虚拟机使用指南" class="headerlink" title="虚拟机使用指南"></a>虚拟机使用指南</h2><p><img src="/./../images/1698989535740.png" alt="1698989535740"></p>
 <p>代码：gcc filename.c -o filename</p>
 <p>​	.&#x2F;filename</p>
+<p>typora中emoji语法</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wangjs-jacky/p/12011208.html">Typora Emoji图标 - 王家盛 - 博客园 (cnblogs.com)</a></p>
 
       
     </div>
