@@ -28,7 +28,7 @@
 <meta property="og:description" content="1.6 熬夜摸鱼之写代码c语言基础不好，需要捡起来。最近的学习重点应该是字符串，先把黄书的字符串知识点看完（其实已经看得差不多了。 明天（其实是今天下午）任务 &#x2F;&#x2F;必须先把今天做的题再做一遍，题解写出来之后再往下进行（复习，然后总览教材上的字符串相关内容，之后再继续写题）  字符串洛谷习题—&gt;写题解 c p p内容看一下 o d算法题上字符串相关内容，看能否往下推进一个算">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-05T20:58:27.000Z">
-<meta property="article:modified_time" content="2025-01-29T14:44:19.143Z">
+<meta property="article:modified_time" content="2025-02-06T17:09:45.045Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -180,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-01-29 22:44:19" itemprop="dateModified" datetime="2025-01-29T22:44:19+08:00">2025-01-29</time>
+                <time title="Modified: 2025-02-07 01:09:45" itemprop="dateModified" datetime="2025-02-07T01:09:45+08:00">2025-02-07</time>
               </span>
 
           
@@ -210,8 +210,28 @@
 <p>🚩strtok(str,”,”)用来分隔传入的字符串，<strong>注意第二个参数必须是字符串</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">(<span class="type">void</span>)</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="type">char</span> str[] = <span class="string">&quot;apple,banana,grape,orange&quot;</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="type">char</span> *token=strtok(str,<span class="string">&quot;,&quot;</span>);<span class="comment">//不明白为什么逗号传入算字符串呢,因为单个字符会转换成ascii码</span></span><br><span class="line"></span><br><span class="line">​    <span class="keyword">while</span> (token!=<span class="literal">NULL</span>)</span><br><span class="line"></span><br><span class="line">​    &#123;</span><br><span class="line"></span><br><span class="line">​        <span class="built_in">printf</span>(<span class="string">&quot;此时token的值是%s\n&quot;</span>,token);</span><br><span class="line"></span><br><span class="line">​        token=strtok(<span class="literal">NULL</span>,<span class="string">&quot;,&quot;</span>);</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
+<h1 id="2-7"><a href="#2-7" class="headerlink" title="2.7"></a>2.7</h1><p>​	今天学习了数组的前半部分。</p>
+<ol>
+<li><p>初始化数组，可以不说明数组元素数量但是要把数组元素全部说出来；打印数组元素，一般采用循环输出的方式。</p>
+</li>
+<li><p>求数组长度sizeof函数：sizeof(arr)&#x2F;sizeof(arr[0]);</p>
+<p>define宏定义用法：<br>#define LENGTH() sizeof(arr)&#x2F;sizeof(arr[0])</p>
+</li>
+<li><p>数组名字相当于指针，指向数组第一个元素地址，a[0]在低地址，a[6]在高地址</p>
+</li>
+<li><p>二维数组声明时即使带元素也要声明列数</p>
+</li>
+<li><p>数组传给函数 int func(int arr[]);int fuc(int arr[10]);int func(int *p)</p>
+</li>
+<li><p>从函数返回数组，用static定义静态数组，数组在整个程序执行完才会被销毁，函数返回数组直接传指针（数组名字），在主函数中用指针接收，则两个指针指向同一个数组的第一个元素地址</p>
+</li>
+</ol>
+<p>🚩任务完成度</p>
+<p>数组剩余五分之一，预计明天一小时完成；</p>
+<p>指针未做，共六块内容，预计需要三小时完成，每半小时一块；</p>
+<p>⚠️此处需要刷一小时左右的代码题，巩固数组和指针的知识；</p>
+<p>明天任务结构体和函数，每个需要一小时差不多；</p>
+<p>可以把字符串再跟一下；</p>
 
     </div>
 
@@ -292,7 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-6-%E7%86%AC%E5%A4%9C%E6%91%B8%E9%B1%BC%E4%B9%8B%E5%86%99%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">1.6 熬夜摸鱼之写代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-29"><span class="nav-number">2.</span> <span class="nav-text">1.29</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-6-%E7%86%AC%E5%A4%9C%E6%91%B8%E9%B1%BC%E4%B9%8B%E5%86%99%E4%BB%A3%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">1.6 熬夜摸鱼之写代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-29"><span class="nav-number">2.</span> <span class="nav-text">1.29</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-7"><span class="nav-number">3.</span> <span class="nav-text">2.7</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
